@@ -188,7 +188,7 @@
 // fruits.shift();
 // console.log("After shift():", fruits); // ['apple', 'banana', 'orange']
 
-// 5. splice(): Changes the contents of an array by removing, replacing, or adding elements.
+// // 5. splice(): Changes the contents of an array by removing, replacing, or adding elements.
 // console.log("\n--- splice() ---");
 // // Removes 'banana' and 'orange' and inserts 'mango' and 'pineapple'
 // fruits.splice(1, 2, "mango", "pineapple");
@@ -217,8 +217,8 @@
 // 2. Non-Mutating Methods: They Return a New Array or Value ✨
 // These methods do not change the original array. Instead, they return a new array or a new value. Think of this as getting a copy of your shopping cart and making changes to the copy, leaving your original cart untouched.
 
-const originalNumbers = [1, 2, 3, 4, 5];
-const originalFruits = ["apple", "banana", "orange", "mango"];
+// const originalNumbers = [1, 2, 3, 4, 5];
+// const originalFruits = ["apple", "banana", "orange", "mango"];
 
 // 1. map(): Creates a new array with the results of calling a provided function on every element.
 // console.log("--- map() ---");
@@ -249,7 +249,7 @@ const originalFruits = ["apple", "banana", "orange", "mango"];
 // console.log('Value from forEach:', total); // 15
 // console.log('Original array is unchanged:', originalNumbers);
 
-// // 5. slice(): Returns a shallow copy of a portion of an array into a new array object.
+// 5. slice(): Returns a shallow copy of a portion of an array into a new array object.
 // console.log("\n--- slice() ---");
 // const slicedFruits = originalFruits.slice(1, 3); // From index 1 up to (but not including) index 3
 // console.log("New array:", slicedFruits); // ['banana', 'orange']
