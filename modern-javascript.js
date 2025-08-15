@@ -1,3 +1,4 @@
+// "use strict";
 //Javascript function syntax
 // function name(p1, p2, p3) {
 //   // your code goes here
@@ -50,8 +51,9 @@
 // Default Parameters: JavaScript allows you to set default values for parameters. If an argument for a parameter with a default value is not provided during the function call, the default value is used.
 
 // function sayHello(name) {
-// let name = "Guest"
+//   // let name = "Guest";
 
+//   // console.log("Hello, ${name}!");
 //   console.log(`Hello, ${name}!`);
 // }
 
@@ -299,18 +301,18 @@
 
 //syntax
 
-try {
-  //Code you want to execute that may potentially throw an error
-  fetchMovies();
-  displaymovies();
-} catch (error) {
-  // Code to execute if an error occurs in the 'try' block
-  // 'error' is a local variable representing the error object
-  console.log("Something went wrong");
-} finally {
-  killfetchfromserver();
-  // Code that will always execute, regardless of whether an error occurred or not
-}
+// try {
+//   //Code you want to execute that may potentially throw an error
+//   fetchMovies();
+//   displaymovies();
+// } catch (error) {
+//   // Code to execute if an error occurs in the 'try' block
+//   // 'error' is a local variable representing the error object
+//   console.log("Something went wrong");
+// } finally {
+//   killfetchfromserver();
+//   // Code that will always execute, regardless of whether an error occurred or not
+// }
 
 //Real-world example
 //Imagine youre writing the code for an ATM machine. You want to try to dispense cash, but if theres an error (like insufficient funds), you want to catch that error and display a message to the user. Finally, you want to log the customers current acct balance whether it was successful or not, and give them their ATM card back.
@@ -331,17 +333,17 @@ try {
 //     console.log(`Step 2: Successfully withdrew $${amountToWithdraw}.`);
 
 //     return balance;
-
 //   } catch (error) {
 //     // This code runs only if an error was "thrown" in the try block.
 //     console.error("Step 2 (Error): Oops! An error occurred:", error.message);
-
 //   } finally {
 //     // This code ALWAYS runs, regardless of success or failure.
 //     console.log(`Your current balance: $${balance}`);
 //     console.log("Step 3: Always remember to give the customer's card back.");
 //   }
 // }
+
+// withdrawMoney(2000, 5000);
 
 // // Example 1: Successful withdrawal
 // console.log("--- Customer 1: Trying to withdraw $50 from a $100 balance ---");
@@ -404,31 +406,31 @@ try {
 // 1. this in an Object Method
 // When a function is called as a method of an object, this refers to that object. This is a fundamental concept for object-oriented programming in JavaScript.
 
-// // Define an object with properties and a method
+// Define an object with properties and a method
 // const user = {
-//   firstName: 'John',
-//   lastName: 'Doe',
+//   firstName: "John",
+//   lastName: "Doe",
 //   age: 30,
 
 //   // This is a method on the 'user' object
-//   getFullName: function() {
+//   getFullName: function () {
 //     // Inside this method, 'this' refers to the 'user' object itself
 //     return `${this.firstName} ${this.lastName}`;
 //   },
 
-//   getAge: function() {
+//   getAge: function () {
 //     // We can access other properties of the object using 'this'
 //     return this.age;
-//   }
+//   },
 // };
 
 // console.log(user.getFullName()); // Output: "John Doe"
-// console.log(user.getAge());      // Output: 30
+// console.log(user.getAge()); // Output: 30
 
 // 2. this Alone (Global Context)
 // When this is used outside of any function or object, it refers to the global object. In a browser, this is the window object. In Node.js (common for backend development), this is the global object.
 
-// // In Node.js, 'this' will refer to the global object.
+// In Node.js, 'this' will refer to the global object.
 // console.log(this === global); // Output: true
 
 // // In a browser, 'this' will refer to the window object.
@@ -437,7 +439,7 @@ try {
 // // You can create a property on the global object
 // this.name = 'Global Scope';
 // console.log(name); // Output: "Global Scope"
-// This is less common in modern backend development, as it can lead to unintentional side effects by polluting the global namespace.
+// // This is less common in modern backend development, as it can lead to unintentional side effects by polluting the global namespace.
 
 // 3. this in a Regular Function
 // When a function is called as a standalone function (not as a method of an object), this also refers to the global object (or window in a browser). This is one of the most confusing aspects for beginners.
@@ -449,7 +451,7 @@ try {
 
 // // Calling the function directly
 // showGlobalContext(); // Output: The global object (e.g., 'global' in Node.js)
-//  //This behavior is a common source of bugs and highlights the importance of understanding the call context.
+// //This behavior is a common source of bugs and highlights the importance of understanding the call context.
 
 // 4. this in a Function (Strict Mode)
 // To address the confusing behavior of this in regular functions, strict mode ('use strict';) was introduced. In strict mode, this in a standalone function is undefined, not the global object. This is a much safer and more predictable default.
@@ -462,7 +464,7 @@ try {
 // }
 
 // showStrictContext(); // Output: undefined
-// // This is the recommended practice for modern JavaScript development.
+// This is the recommended practice for modern JavaScript development.
 
 // 5. this in an Event Handler
 // In a browser environment, this inside an event handler function refers to the specific DOM element that triggered the event. This is crucial for manipulating the element that was clicked, hovered over, etc.
