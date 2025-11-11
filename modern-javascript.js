@@ -1,22 +1,73 @@
+let age = 12;
+
+let waistCircumference = 25.5;
+
+let isAdult = false;
+let isFemale = true;
+
+const person1 = {
+  firstName: "Kene",
+  lastName: "Banigo",
+  course: "backend",
+  address: "qwertyuiopkjhgdaZxcvbn",
+  age: 25,
+};
+
+console.log(person1);
+
+const skillboostPeople = [
+  {
+    firstName: "Kene",
+    lastName: "Banigo",
+    course: "backend",
+    address: "qwertyuiopkjhgdaZxcvbn",
+    age: 25,
+    firstName: "Edwin",
+  },
+  {
+    firstName: "Kene",
+    lastName: "Banigo",
+    course: "backend",
+    address: "qwertyuiopkjhgdaZxcvbn",
+    age: 25,
+  },
+  {
+    firstName: "Kene",
+    lastName: "Banigo",
+    course: "backend",
+    address: "qwertyuiopkjhgdaZxcvbn",
+    age: 25,
+  },
+];
+
 // "use strict";
 //Javascript function syntax
-// function name(p1, p2, p3) {
-//   // your code goes here
-// }
+function name(p1, p2, p3) {
+  // your code goes here
+}
 // A function is defined with the function keyword, followed by the function name, followed by parentheses ( ), followed by brackets { }.
 
 //Ways to write a function in JavaScript
 // Function Declaration
-//syntax
-// function functionName(parameter 1, parameter 2) {
+// syntax
+// function functionName(parameter1, parameter2) {
 //     //code to be executed
 //     return result; //optional: if thres a value to be returned
 // }
 
-// //example
-// function add(a, b) {
-//   return a + b;
-// }
+// let sum;
+
+// // // //example
+// sum = function add(a, b) {
+//   a = 4;
+//   b = 6;
+
+//   const result = a + b;
+//   console.log("result", result);
+//   return result;
+// };
+
+// sum(14);
 
 // Function Expression: assigning a function to a variable
 
@@ -33,6 +84,7 @@
 
 // Arrow Function
 // const multiply = (a, b) => {
+//     console.log("Hello world")
 //   return a * b;
 // };
 
@@ -51,9 +103,9 @@
 // Default Parameters: JavaScript allows you to set default values for parameters. If an argument for a parameter with a default value is not provided during the function call, the default value is used.
 
 // function sayHello(name) {
-//   // let name = "Guest";
+//   let name = "Guest";
 
-//   // console.log("Hello, ${name}!");
+//   console.log("Hello, ${name}!");
 //   console.log(`Hello, ${name}!`);
 // }
 
